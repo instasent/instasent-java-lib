@@ -1,7 +1,7 @@
 Welcome to __Instasent Java SDK__. This repository contains Instasent's Java SDK and samples for REST API.
 
 ## Installation
-Download JAR
+[https://github.com/instasent/instasent-java-lib/releases/download/0.1.0/instasent-java-lib.jar]
 ## Example
 ### Send an SMS
 You can check 'examples/ExampleSendSms.java' file.
