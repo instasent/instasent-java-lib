@@ -22,8 +22,8 @@ public class main {
 ## Available functions
 ```
 instasentClient.sendSms(sender, to, text, callback);
-instasent.getSms(page, per_page)
-instasent.getSmsById(message_id)
+instasentClient.getSms(page, per_page)
+instasentClient.getSmsById(message_id)
 ```
 ## Documentation
 Complete documentation at :
