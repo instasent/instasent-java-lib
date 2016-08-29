@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.Map;
 import com.instasent.InstasentClient;
 
-public class ExampleSendSms {
+public class SendSms {
 
     public static void main(String[] args) throws IOException {
 

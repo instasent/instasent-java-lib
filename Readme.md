@@ -21,9 +21,30 @@ public class main {
 ```
 ## Available functions
 ```
+SMS
+
 instasentClient.sendSms(sender, to, text, callback);
 instasentClient.getSms(page, per_page)
 instasentClient.getSmsById(message_id)
+
+Verify
+
+instasentClient.requestVerify(from, to, text, token_length, timeout, client_id);
+instasentClient.getVerify(page, per_page)
+instasentClient.getVerifyById(message_id)
+instasentClient.checkVerify(id, token)
+
+Lookup
+
+instasentClient.doLookup(to;
+instasentClient.getLookups(page, per_page)
+instasentClient.getLookupById(message_id)
+
+Account
+
+instasentClient.getAccountBalance();
+
+
 ```
 ## Documentation
 Complete documentation at :
