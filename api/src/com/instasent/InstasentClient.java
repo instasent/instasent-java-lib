@@ -9,23 +9,17 @@ import java.util.Map;
 
 public class InstasentClient {
 
-    private String rootEndpoint = "http://api.instasent.codes";
-    private String secureChannel = "http://api.instasent.codes";
+    private String secureChannel = "https://api.instasent.codes";
     private String token;
-    private boolean userSecureChannel = true;
 
-    public InstasentClient(String token, boolean useSecureChannel) {
+    public InstasentClient(String token) {
         this.token = token;
-        this.userSecureChannel = useSecureChannel;
     }
 
     public Map<String, String> sendSms(String from, String to, String text) {
         String url;
 
-        if (this.userSecureChannel)
-            url = this.secureChannel + "/sms/";
-        else
-            url = this.rootEndpoint + "/sms/";
+        url = this.secureChannel + "/sms/";
 
         String httpMethod = "POST";
 
@@ -41,10 +35,7 @@ public class InstasentClient {
 
         String url;
 
-        if (this.userSecureChannel)
-            url = this.secureChannel + "/sms/?" + "page=" + page + "&per_page=" + per_page;
-        else
-            url = this.rootEndpoint + "/sms/?" + "page=" + page + "&per_page=" + per_page;
+        url = this.secureChannel + "/sms/?" + "page=" + page + "&per_page=" + per_page;
 
         String httpMethod = "GET";
 
@@ -57,10 +48,7 @@ public class InstasentClient {
 
         String url;
 
-        if (this.userSecureChannel)
-            url = this.secureChannel + "/sms/" + id;
-        else
-            url = this.rootEndpoint + "/sms/" + id;
+        url = this.secureChannel + "/sms/" + id;
 
         String httpMethod = "GET";
 
