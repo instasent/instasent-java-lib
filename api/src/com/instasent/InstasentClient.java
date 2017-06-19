@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class InstasentClient {
 
-    private String secureChannel = "https://api.instasent.codes";
+    private String secureChannel = "https://api.instasent.com";
     private String token;
 
     public InstasentClient(String token) {
