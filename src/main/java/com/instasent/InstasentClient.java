@@ -31,6 +31,22 @@ public class InstasentClient {
         return this.execRequest(url, httpMethod, data);
     }
 
+    public Map<String, String> sendUnicodeSms(String from, String to, String text) {
+        String url;
+
+        url = this.secureChannel + "/sms/";
+
+        String httpMethod = "POST";
+
+        Map<String, String> data = new HashMap<String, String>();
+        data.put("allowUnicode", "1");
+        data.put("from", from);
+        data.put("to", to);
+        data.put("text", text);
+
+        return this.execRequest(url, httpMethod, data);
+    }
+
     public Map<String, String> getSms(int page, int per_page) {
 
         String url;
@@ -63,7 +79,6 @@ public class InstasentClient {
         Response response = null;
 
         try {
-
 
             if (httpMethod == "POST") {
                 StringWriter out = new StringWriter();
